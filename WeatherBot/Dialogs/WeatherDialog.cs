@@ -23,7 +23,7 @@ namespace WeatherBot.Dialogs
             var reply = context.MakeMessage();
             YahooWeather yw = new YahooWeather();
 
-            if (luisresult.TryFindEntity("LocName", out _location))
+            if (luisresult.TryFindEntity("Weather.Location", out _location))
             {
                 await yw.GetWeatherFromYahoo(context, _location.Entity.ToString());
                 context.Done(true);

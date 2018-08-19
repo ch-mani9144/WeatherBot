@@ -22,7 +22,7 @@ namespace WeatherBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        [LuisIntent("Weather")]
+        [LuisIntent("Weather.GetForecast")]
         public async Task getWeatherAsync(IDialogContext context, LuisResult result)
         {
             await context.Forward(new WeatherDialog(), OnCompeletionAsync, result, System.Threading.CancellationToken.None);
