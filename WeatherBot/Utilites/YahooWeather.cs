@@ -28,8 +28,8 @@ namespace WeatherBot.Utilites
                     Title = report.title.Split('-')[1].Trim(),
                     Subtitle = report.item.condition.date,
                     //Text = "<b>Temperature :</b><BR />" + report.item.condition.temp +" " + report.units.temperature + "<BR /><b>Current Condition :</b><BR />" + report.item.condition.text + "<BR />",
-                    Text = "Temperature :" + report.item.condition.temp + " " + report.units.temperature + "\n\nCurrent Condition :" + report.item.condition.text + "\n",
-                    Images = new List<CardImage> { new CardImage("https://l.yimg.com/a/i/us/we/52/" + report.item.condition.code + ".gif") },
+                    Text = "Temperature : " + report.item.condition.temp + " " + report.units.temperature + "\n\nCurrent Condition : " + report.item.condition.text + "\n",
+                    Images = new List<CardImage> { new CardImage("http://l.yimg.com/a/i/us/we/52/" + report.item.condition.code + ".gif") },
                     Buttons = new List<CardAction> { new CardAction(ActionTypes.OpenUrl, "Full Forecast", value: "https://weather.yahoo.com/" + report.location.country + '/' + report.location.region.Trim() + '/' + report.location.city + '-' + getWOEID(report.location.city)+'/') }
                 }.ToAttachment();
 
