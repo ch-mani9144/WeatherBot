@@ -21,7 +21,6 @@ namespace WeatherBot.Utilites
                 request.AddHeader("accept", "application/json");
                 IRestResponse response = client.Execute(request);
                 var result = JsonConvert.DeserializeObject<WeatherReportDS>(response.Content);
-
                 var reply = context.MakeMessage();
                 var  report = result.query.results.channel;
                 var heroCard = new ThumbnailCard
