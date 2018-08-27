@@ -5,19 +5,33 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
             font-family: 'Segoe UI';
-            text-align:center;
+            text-align: center;
+        }
+
+        iframe {
+            background-color: azure;
+            width: 90%;
         }
     </style>
 </head>
 <body >
     <h1>WeatherBot</h1>
     <p>This is a simple echo bot sample using Microsoft Bot Framework.</p>
-    <iframe width="600" height="500" src='https://webchat.botframework.com/embed/RVRWeatherBot?s=Fi7BA2dmV1M.cwA.OE4.ArD6dzJVdDQgF20F7GEwSVYG39G7ASds-47qkAqVqk0'>
-        
-    </iframe>
     
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <iframe height="550" src='https://webchat.botframework.com/embed/RVRWeatherBot?s=Fi7BA2dmV1M.cwA.OE4.ArD6dzJVdDQgF20F7GEwSVYG39G7ASds-47qkAqVqk0'></iframe>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
 </body>
 </html>
